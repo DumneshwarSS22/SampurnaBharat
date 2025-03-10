@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Sampurna Bharat</title>
+    <link rel="stylesheet" href="/css/registration.css">
+</head>
+
+<body>
+
+<div class="registration-container">
+    <h2>Register for Sampurna Bharat</h2>
+    <p>Health Data Management and Information System</p>
+
+    <!-- Tab Navigation for Different Registrations -->
+    <div class="tabs">
+        <button onclick="showForm('government')">Government Official</button>
+        <button onclick="showForm('doctor')">Doctor</button>
+        <button onclick="showForm('user')">User (Patient)</button>
+    </div>
+
+    <!-- Government Official Registration Form -->
+    <form id="government-form" class="registration-form">
+        <h3>Government Official Registration</h3>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Government ID" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- Doctor Registration Form -->
+    <form id="doctor-form" class="registration-form" style="display: none;">
+        <h3>Doctor Registration</h3>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Medical License No." required>
+        <input type="text" placeholder="Specialty" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- User (Patient) Registration Form -->
+    <form id="user-form" class="registration-form" style="display: none;">
+        <h3>User (Patient) Registration</h3>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="number" placeholder="Age" required>
+        <select required>
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<script src="/js/registration.js"></script>
+</body>
+
+</html>
